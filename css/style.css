@@ -1,0 +1,37 @@
+#home {
+    background-image: url("/img/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 500px;
+    color: white;
+    font-size: 24px;
+}
+nav {
+    padding: 0% 5% 0% 2%;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    font-family: 'Aladin', cursive;
+    letter-spacing: 0.009em;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+}
+.intro{
+    text-align: center;
+    padding-top: 90px;
+    font-size: 32px;
+    position: relative;
+}
+.mouse{
+    animation: bounce 3s infinite;
+}
