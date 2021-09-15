@@ -1,8 +1,12 @@
-#home {
-    background-image: url("/img/bg.png");
+body{
+    background-image: url("/img/bg1.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+}
+header {
+    
+
     height: 500px;
     color: white;
     font-size: 24px;
@@ -21,17 +25,34 @@ nav a {
     text-decoration: none;
 }
 
-li {
+nav li {
     list-style-type: none;
     display: inline-block;
     padding: 20px;
 }
 .intro{
     text-align: center;
-    padding-top: 90px;
+    padding-top: 70px;
     font-size: 32px;
     position: relative;
 }
 .mouse{
     animation: bounce 3s infinite;
+}
+.menu{
+    background-color: white;
+    /* width: 100%;
+    height: 300px; */
+}
+.menu h1{
+    text-align: center;
+
+}
+.card{
+    width: fit-content;
+    margin: 10px;
+    padding: 0px;
+}
+.food{
+    margin-left:2% ;
 }
