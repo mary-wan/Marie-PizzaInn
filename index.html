@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Marie's PizzaInn</title>
 </head>
@@ -17,7 +20,7 @@
         <section id="home">
             <header>
                 <nav class="navbar navbar-expand-lg">
-                    <img src="img/icon.png" alt="logo" class="navbar-brand" width="150" height="100">
+                    <img src="img/icon.png" alt="logo" class="navbar-brand" width="200" height="100">
                     <!-- <p class="navbar-brand">Marie's PizzaInn</p> -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,144 +52,160 @@
                 <h1>Our Menu</h1>
                 Perfect has 7 letters but so does Pizzzza. <br>
                 It's okay to eat a whole pizza by yourself <br><br>
-                <div class=" food row">
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza1.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> Pepperoni pizza</p>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza2.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> Veggie pizza</p>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza3.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> BBQ Chicken pizza</p>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza5.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> Cheese pizza</p>
-                    </div>
-                    <!-- <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza6.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> Meat pizza</p>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza7.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> Hawaiian pizza</p>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza1.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> Supreme pizza</p>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12">
-                        <img src="img/pizza4.jpg" class="card-img-top" height="150">
-                        <p class="desc p-4"> Meat Deluxe pizza</p>
-                    </div> -->
-                </div>
-            </div>
-        </section><br>
+                <div class="container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
 
-        <!-- Order -->
-        <section id="order" class="order row pb-3">
-            <h2>Place Your Order</h2>
-            <div class="makeOrder col-lg-6 col-sm-8">
-                <form class="text-white">
-                    <div class="form-group">
-                        <label for="pizzaType" class="mb-1">Select type of Pizza: </label><br>
-                        <select id="pizzaType"><br>
-                            <option>Pepperoni</option>
-                            <option>Veggie</option>
-                            <option>BBQ Chicken</option>
-                            <option>Cheese</option>
-                            <option>Meat</option>
-                            <option>Hawaiian</option>
-                            <option>Supreme</option>
-                            <option>Meat Deluxe</option>
-                        </select>
-                    </div><br><br>
-                    <div class="form-group">
-                        <label for="size" class="mb-1">Select Pizza Size: </label><br>
-                        <select id="pizzaType">
-                            <option class="text-center">--Select--</option>
-                            <option>Large</option>
-                            <option>Medium</option>
-                            <option>Small</option>
-                        </select>
-                    </div><br><br>
-                    <div class="form-group">
-                        <label for="size" class="mb-1">Select crust: </label><br>
-                        <select id="pizzaType">
-                            <option class="text-center">--Select--</option>
-                            <option>Crispy --Ksh 200</option>
-                            <option>Stuffed -- Ksh 300</option>
-                            <option>Gluten-free -- Ksh 100</option>
-                            <option>Cracker --- Ksh 150</option>
-                        </select><br><br>
-                        <div class="toppings">
-                            Select your favorite topping <br>
-                            Small --> ksh 100, Medium --> ksh 150, Large --> ksh 200
-                            <div class="check mt-3">
-                                <div>
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Sausage
-                                    </label>
+                            <div class="item active">
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza1.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> Pepperoni pizza</p>
                                 </div>
-                                <div>
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Pinapple
-                                    </label>
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza2.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> Veggie pizza</p>
                                 </div>
-                                <div>
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Mushroom
-                                    </label>
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza3.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> BBQ Chicken pizza</p>
                                 </div>
-                                <div>
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Bacon
-                                    </label>
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza5.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> Cheese pizza</p>
                                 </div>
                             </div>
+
+                            <div class="item">
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza6.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> Meat pizza</p>
+                                </div>
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza7.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> Hawaiian pizza</p>
+                                </div>
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza1.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> Supreme pizza</p>
+                                </div>
+                                <div class="card col-lg-3 col-md-6 col-sm-12">
+                                    <img src="img/pizza4.jpg" class="card-img-top" height="150">
+                                    <p class="desc p-4"> Meat Deluxe pizza</p>
+                                </div>
+                            </div>
+
                         </div>
-                    </div><br>
-                    <input type="submit" value="ORDER" id="pizzaOrder" class="btn mt-4 btn-secondary mb-2">
-                </form>
+                        <a href="#myCarousel" class="left carousel-control" data-slide="prev"><span
+                                class="icon-prev"></span></a>
+                        <a href="#myCarousel" class="right carousel-control" data-slide="next"><span
+                                class="icon-next"></span></a>
+                    </div>
+                </div>
             </div>
-            <div class="orderConfirmation col-lg-6 col-sm-8">
-                <table class="table table-sm text-white checkout-table">
-                    <thead>
-                        <tr>
-                            <th>Type</th>
-                            <th>Size</th>
-                            <th>Crust</th>
-                            <th>Topping</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody id="purchaseOrder">
-                        <tr>
-                            <td id="type"></td>
-                            <td id="size"></td>
-                            <td id="crust"></td>
-                            <td id="topping"></td>
-                            <td id="total"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="btn m-1" id="add">ADD</button>
-                <button class="btn m-1" id="checkout">CHECKOUT</button>
-                <button class="btn m-1" id="homeDelivery">HOME DELIVERY</button>
-            </div>
-        </section>
+    </div>
+    </section><br>
 
-        <!-- contact -->
-        <section id="contact">
+    <!-- Order -->
+    <section id="order" class="order row pb-3">
+        <h2>Place Your Order</h2>
+        <div class="makeOrder col-lg-6 col-sm-8">
+            <form class="text-white">
+                <div class="form-group">
+                    <label for="pizzaType" class="mb-1">Select type of Pizza: </label><br>
+                    <select id="pizzaType"><br>
+                        <option>Pepperoni</option>
+                        <option>Veggie</option>
+                        <option>BBQ Chicken</option>
+                        <option>Cheese</option>
+                        <option>Meat</option>
+                        <option>Hawaiian</option>
+                        <option>Supreme</option>
+                        <option>Meat Deluxe</option>
+                    </select>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="size" class="mb-1">Select Pizza Size: </label><br>
+                    <select id="pizzaType">
+                        <option class="text-center">--Select--</option>
+                        <option>Large</option>
+                        <option>Medium</option>
+                        <option>Small</option>
+                    </select>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="size" class="mb-1">Select crust: </label><br>
+                    <select id="pizzaType">
+                        <option class="text-center">--Select--</option>
+                        <option>Crispy --Ksh 200</option>
+                        <option>Stuffed -- Ksh 300</option>
+                        <option>Gluten-free -- Ksh 100</option>
+                        <option>Cracker --- Ksh 150</option>
+                    </select><br><br>
+                    <div class="toppings">
+                        Select your favorite topping <br>
+                        Small --> ksh 100, Medium --> ksh 150, Large --> ksh 200
+                        <div class="check mt-3">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Sausage
+                                </label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Pinapple
+                                </label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Mushroom
+                                </label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Bacon
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <input type="submit" value="ORDER" id="pizzaOrder" class="btn mt-4 btn-secondary mb-2">
+            </form>
+        </div>
+        <div class="orderConfirmation col-lg-6 col-sm-8">
+            <table class="table table-sm text-white checkout-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Crust</th>
+                        <th>Topping</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="purchaseOrder">
+                    <tr>
+                        <td id="type"></td>
+                        <td id="size"></td>
+                        <td id="crust"></td>
+                        <td id="topping"></td>
+                        <td id="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn m-1" id="add">ADD</button>
+            <button class="btn m-1" id="checkout">CHECKOUT</button>
+            <button class="btn m-1" id="homeDelivery">HOME DELIVERY</button>
+        </div>
+    </section>
 
-        </section>
+    <!-- contact -->
+    <section id="contact">
+
+    </section>
 
     </div><br><br>
     <footer class="container-fluid">
@@ -197,9 +216,9 @@
         </div> -->
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
