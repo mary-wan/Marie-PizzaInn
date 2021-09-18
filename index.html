@@ -45,7 +45,7 @@
                 </div>
             </header>
 
-            <!-- Menu -->
+            <!-- Menu Section -->
             <div class="menu p-4">
                 <h1>Our Menu</h1>
                 Perfect has 7 letters but so does Pizzzza. <br>
@@ -91,19 +91,20 @@
                                     <p class="desc p-4"> Meat Deluxe pizza</p>
                                 </div>
                             </div>
-
                         </div>
                         <a href="#myCarousel" class="left carousel-control" data-slide="prev"><span
-                                class="icon-prev"></span></a>
+                                class="icon-prev"></span>
+                        </a>
                         <a href="#myCarousel" class="right carousel-control" data-slide="next"><span
-                                class="icon-next"></span></a>
+                                class="icon-next"></span>
+                        </a>
                     </div>
                 </div>
             </div>
     </div>
     </section><br>
 
-    <!-- Order -->
+    <!-- Order Section-->
     <section id="order" class="order row pb-3">
         <h1>Place Your Order</h1>
         <h2 class="display text-warning mb-5"></h2>
@@ -134,7 +135,7 @@
                 <div class="form-group">
                     <label for="size" class="mb-1">Select crust: </label><br>
                     <select id="pizzaCrust">
-                        <option value = "select" class="text-center">--Select--</option>
+                        <option value="select" class="text-center">--Select--</option>
                         <option value="crispy">Crispy ---Ksh 200</option>
                         <option value="stuffed">Stuffed ---Ksh 300</option>
                         <option value="gluten">Gluten free ---Ksh 100</option>
@@ -145,19 +146,22 @@
                         Small --> ksh 100, Medium --> ksh 150, Large --> ksh 200
                         <div class="check mt-3">
                             <div>
-                                <input class="form-check-input" type="checkbox" value="sausage" id="sausage" name="crusts">
+                                <input class="form-check-input" type="checkbox" value="sausage" id="sausage"
+                                    name="crusts">
                                 <label class="form-check-label" for="sausage">
                                     Sausage
                                 </label>
                             </div>
                             <div>
-                                <input class="form-check-input" type="checkbox" value="pinapple" id="pinapple" name="crusts">
+                                <input class="form-check-input" type="checkbox" value="pinapple" id="pinapple"
+                                    name="crusts">
                                 <label class="form-check-label" for="pinnapple">
                                     Pinapple
                                 </label>
                             </div>
                             <div>
-                                <input class="form-check-input" type="checkbox" value="mushroom" id="mushroom" name="crusts">
+                                <input class="form-check-input" type="checkbox" value="mushroom" id="mushroom"
+                                    name="crusts">
                                 <label class="form-check-label" for="mushroom">
                                     Mushroom
                                 </label>
@@ -171,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="ORDER" id="pizzaOrder" class="btn mt-4 btn-secondary mb-2">
+                <input type="submit" value="ORDER" id="submtOrder" class="btn mt-4 btn-secondary mb-2 pizzaOrder">
             </form> <br><br>
         </div>
         <div class="orderConfirmation container col-lg-6 col-sm-8">
@@ -186,21 +190,19 @@
                     </tr>
                 </thead>
                 <tbody id="purchaseOrder">
-                    <tr>
-                        <td id="type"></td>
-                        <td id="size"></td>
-                        <td id="crust"></td>
-                        <td id="topping"></td>
-                        <td id="total"></td>
-                    </tr>
                 </tbody>
             </table>
-            <button class="btn m-1" id="checkout">CHECKOUT</button>
-            <button class="btn m-1" id="homeDelivery">HOME DELIVERY</button>
+            <div class="checkdelivery">
+                <button class=" pizzaOrder btn m-3" id="add">ADD</button>
+                <button class="btn m-3" id="checkout">CHECKOUT</button>
+                <div class="checkoutMessage"></div>
+                <button class="btn " id="homeDelivery">HOME DELIVERY</button>
+            </div>
+            
         </div>
     </section>
 
-    <!-- contact -->
+    <!-- contact Section -->
     <section id="contact">
 
     </section>
@@ -213,6 +215,7 @@
             <p>2021</p>
         </div> -->
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
