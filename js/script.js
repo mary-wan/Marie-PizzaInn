@@ -1,16 +1,5 @@
-// let map;
-
-// function initMap() {
-//     map = new google.maps.Map(document.getElementById("map"), {
-//         center: {
-//             lat:  -1.232667,
-//             lng: 36.878592
-//         },
-//         zoom: 18,
-//     });
-// }
 $(document).ready(function () {
-    $("form#orderSubmit").submit(function (e) {
+    $(".pizzaOrder").click(function (e) {
         e.preventDefault();
 
         function pizza(type, size, crust, topping, total) {
@@ -21,8 +10,9 @@ $(document).ready(function () {
             this.total = total;
 
         }
+        // pizza.prototype.checkoutPrice = function(){
 
-
+        // }
         var inputtedType = $("#pizzaType").find(":selected").text();
         var inputtedSize = $("#pizzaSize").find(":selected").val();
         var inputtedCrust = $("#pizzaCrust").find(":selected").val();
@@ -36,7 +26,9 @@ $(document).ready(function () {
             $(".display").text("Please select pizza Topping");
         } else {
             $(".display").hide();
-            $("#pizzaOrder").prop("value","ADD")
+            $("#submtOrder").hide();
+            $(".orderConfirmation").fadeIn("slow");
+
             var totalPrice;
             var crustPrice;
 
@@ -64,25 +56,29 @@ $(document).ready(function () {
             }
 
             var pizzaOrder = new pizza(inputtedType, inputtedSize, inputtedCrust, inputtedTopping, totalPrice);
-            // alert(pizzaOrder.size);
 
             $(".table").append("<tr><td>" + pizzaOrder.type + "</td><td>" + pizzaOrder.size + "</td><td>" +
                 pizzaOrder.crust + "</td><td>" + pizzaOrder.topping + "</td><td>" + pizzaOrder.total + "</td></tr>");
 
 
         }
-        
+        $("#checkout").click(function () {
+            $("#add").hide();
+            $("#checkout").hide();
+            $("#checkoutMessage").show();
+            var tbl = document.querySelector("table");
+            var tableRow = tbl.getElementsByTagName("TR");
+            var checkoutTotal = 0;
+            for (let i = 1; i < tableRow.length; i++) {
+                var col = tableRow[i].getElementsByTagName("TD");
+                checkoutTotal += parseFloat(col[4].innerHTML);
+            }
+            $(".checkoutMessage").show().text("The total Price is " + checkoutTotal + ". Your pizza  will be ready for pickup in 30 minutes. We look forward to serving you again. ");
+            $("#homeDelivery").css("margin-top", "70px");
+            $("#homeDelivery").css("margin-left", "20%");
 
+        });
 
-        // alert(inputtedType);
-        // alert(inputtedSize);
-        // alert(inputtedCrust);
-        // alert(inputtedTopping);
-
-        // $("#type").text(inputtedType);
-        // $("#size").text(inputtedSize);
-        // $("#crust").text(inputtedCrust);
-        // $("#topping").text(inputtedTopping);
 
     });
 
