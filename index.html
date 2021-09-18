@@ -7,11 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Marie's PizzaInn</title>
@@ -110,8 +106,9 @@
     <!-- Order -->
     <section id="order" class="order row pb-3">
         <h1>Place Your Order</h1>
+        <h2 class="display text-warning mb-5"></h2>
         <div class="makeOrder col-lg-6 col-sm-8">
-            <form class="text-white">
+            <form class="text-white" id="orderSubmit">
                 <div class="form-group">
                     <label for="pizzaType" class="mb-1">Select type of Pizza: </label><br>
                     <select id="pizzaType"><br>
@@ -127,47 +124,47 @@
                 </div><br><br>
                 <div class="form-group">
                     <label for="size" class="mb-1">Select Pizza Size: </label><br>
-                    <select id="pizzaType">
-                        <option class="text-center">--Select--</option>
-                        <option>Large ---Ksh 1100</option>
-                        <option>Medium ---Ksh 750</option>
-                        <option>Small ---Ksh 500</option>
+                    <select id="pizzaSize">
+                        <option value="select" class="text-center">--Select--</option>
+                        <option value="large">Large ---Ksh 1100</option>
+                        <option value="medium">Medium ---Ksh 750</option>
+                        <option value="small">Small ---Ksh 500</option>
                     </select>
                 </div><br><br>
                 <div class="form-group">
                     <label for="size" class="mb-1">Select crust: </label><br>
-                    <select id="pizzaType">
-                        <option class="text-center">--Select--</option>
-                        <option>Crispy --Ksh 200</option>
-                        <option>Stuffed -- Ksh 300</option>
-                        <option>Gluten-free -- Ksh 100</option>
-                        <option>Cracker --- Ksh 150</option>
+                    <select id="pizzaCrust">
+                        <option value = "select" class="text-center">--Select--</option>
+                        <option value="crispy">Crispy ---Ksh 200</option>
+                        <option value="stuffed">Stuffed ---Ksh 300</option>
+                        <option value="gluten">Gluten free ---Ksh 100</option>
+                        <option value="cracker">Cracker ---Ksh 150</option>
                     </select><br><br>
                     <div class="toppings">
                         Select your favorite topping <br>
                         Small --> ksh 100, Medium --> ksh 150, Large --> ksh 200
                         <div class="check mt-3">
                             <div>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="sausage" id="sausage" name="crusts">
+                                <label class="form-check-label" for="sausage">
                                     Sausage
                                 </label>
                             </div>
                             <div>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="pinapple" id="pinapple" name="crusts">
+                                <label class="form-check-label" for="pinnapple">
                                     Pinapple
                                 </label>
                             </div>
                             <div>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="mushroom" id="mushroom" name="crusts">
+                                <label class="form-check-label" for="mushroom">
                                     Mushroom
                                 </label>
                             </div>
                             <div>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="bacon" id="bacon" name="crusts">
+                                <label class="form-check-label" for="bacon">
                                     Bacon
                                 </label>
                             </div>
@@ -177,11 +174,11 @@
                 <input type="submit" value="ORDER" id="pizzaOrder" class="btn mt-4 btn-secondary mb-2">
             </form> <br><br>
         </div>
-        <div class="orderConfirmation col-lg-6 col-sm-8">
+        <div class="orderConfirmation container col-lg-6 col-sm-8">
             <table class="table table-sm text-white checkout-table">
                 <thead>
                     <tr>
-                        <!-- <th>Type</th> -->
+                        <th>Type</th>
                         <th>Size</th>
                         <th>Crust</th>
                         <th>Topping</th>
@@ -190,7 +187,7 @@
                 </thead>
                 <tbody id="purchaseOrder">
                     <tr>
-                        <!-- <td id="type"></td> -->
+                        <td id="type"></td>
                         <td id="size"></td>
                         <td id="crust"></td>
                         <td id="topping"></td>
@@ -198,7 +195,6 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="btn m-1" id="add">ADD</button>
             <button class="btn m-1" id="checkout">CHECKOUT</button>
             <button class="btn m-1" id="homeDelivery">HOME DELIVERY</button>
         </div>
@@ -217,10 +213,8 @@
             <p>2021</p>
         </div> -->
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>

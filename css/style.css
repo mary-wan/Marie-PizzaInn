@@ -124,21 +124,17 @@ select{
     clear: right;
     font-size: 16px;
 }
-#add, #checkout,#homeDelevery{
+#pizzaOrder, #checkout,#homeDelevery{
     width: 150px;
 }
 /* .orderConfirmation{
     display: none;
 } */
+
 /* footer */
 footer{
     text-align: center;
-    /* background-color: white; */
-}
-#map{
-    height: 300px;
-    width: 95%;
-    margin-left: 2%;
+
 }
 .btn{
     background-color: green;
