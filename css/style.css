@@ -150,7 +150,7 @@ select{
 .checkoutMessage{
     display: none;
 }
-#checkoutMessage{
+#checkoutMessage,.address p{
     font-size: 24px;
 }
 #homeCheckout{
