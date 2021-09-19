@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <section id="home">
             <header>
-                <nav class="navbar navbar-expand-lg">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
                     <img src="img/icon.png" alt="logo" class="navbar-brand" width="200" height="100">
                     <!-- <p class="navbar-brand">Marie's PizzaInn</p> -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -87,7 +87,7 @@
                                     <p class="desc p-4"> Supreme pizza</p>
                                 </div>
                                 <div class="card col-lg-3 col-md-6 col-sm-12">
-                                    <img src="img/pizz.jpeg" class="card-img-top" height="150">
+                                    <img src="img/pizza5.jpg" class="card-img-top" height="150">
                                     <p class="desc p-4"> Meat Deluxe pizza</p>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                         <option>Supreme</option>
                         <option>Meat Deluxe</option>
                     </select>
-                </div><br><br>
+                </div><br>
                 <div class="form-group">
                     <label for="size" class="mb-1">Select Pizza Size: </label><br>
                     <select id="pizzaSize">
@@ -131,7 +131,7 @@
                         <option value="medium">Medium ---Ksh 750</option>
                         <option value="small">Small ---Ksh 500</option>
                     </select>
-                </div><br><br>
+                </div><br>
                 <div class="form-group">
                     <label for="size" class="mb-1">Select crust: </label><br>
                     <select id="pizzaCrust">
@@ -140,8 +140,8 @@
                         <option value="stuffed">Stuffed ---Ksh 300</option>
                         <option value="gluten">Gluten free ---Ksh 100</option>
                         <option value="cracker">Cracker ---Ksh 150</option>
-                    </select><br><br>
-                    <div class="toppings">
+                    </select><br>
+                    <div class="toppings mt-3">
                         Select your favorite topping <br>
                         Small --> ksh 100, Medium --> ksh 150, Large --> ksh 200
                         <div class="check mt-3">
@@ -179,19 +179,21 @@
             </form> <br><br>
         </div>
         <div class="orderConfirmation col-lg-6 col-sm-8">
-            <table class="table table-sm text-white checkout-table">
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Size</th>
-                        <th>Crust</th>
-                        <th>Topping</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody id="purchaseOrder">
-                </tbody>
-            </table>
+            <div class="tableContainer">
+                <table class="table table-sm text-white checkout-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Size</th>
+                            <th>Crust</th>
+                            <th>Topping</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="purchaseOrder">
+                    </tbody>
+                </table>
+            </div>
             <div class="checkdelivery">
                 <button class=" pizzaOrder btn m-3" id="add">ADD</button>
                 <button class="btn m-3" id="checkout">CHECKOUT</button>
@@ -199,27 +201,28 @@
                     <p id="checkoutMessage"></p>
                     <button class="btn " id="homeDelivery">HOME DELIVERY</button>
                 </div>
-                
 
-                <div class="address mt-5">
-                    <legend class="text-white text-center mt-3">Please Enter Your Details</legend><br>
-                    <form >
+
+                <div class="address mt-1">
+                    <legend class="text-white text-center">Please Enter Your Details</legend><br>
+                    <form>
                         <div class="form-group row">
                             <label for="name" class="col-sm-4 col-form-label">Name:</label>
                             <div class="col-sm-8">
-                                <input type="text" name="name" id="name" placeholder="Enter name" required>
+                                <input type="text" name="name" id="name" placeholder="Enter name" required class="text-black">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="phonenum" class="col-sm-4 col-form-label">Phone:</label>
                             <div class="col-sm-8">
-                                <input type="text" name="phonenum" id="phonenum" class ="text-black" placeholder="Enter phone number" required>
+                                <input type="text" name="phonenum" id="phonenum" class="text-black"
+                                    placeholder="Enter phone number" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="location" class="col-sm-4 col-form-label">Location:</label>
                             <div class="col-sm-8">
-                                <input type="text" name="location" id="location" placeholder="Enter location" required>
+                                <input type="text" name="location" id="location" placeholder="Enter location" required class="text-black">
                             </div>
                         </div>
                         <button class="btn" id="homeCheckout">CHECKOUT</button>

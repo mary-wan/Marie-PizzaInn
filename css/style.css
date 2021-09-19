@@ -7,17 +7,23 @@ body {
     font-size: 18px;
     font-weight: normal;
 }
-
 header {
     height: fit-content;
     color: white;
     font-size: 24px;
+
 }
 .navbar-brand{
-    margin-left: -3%;
+    margin-right: auto;
+}
+.navbar{
+    overflow: hidden;
+    margin-left: -2%;
+    margin-right: -2%;
 }
 nav {
     padding: 0% 5% 0% 0%;
+
 }
 
 .navbar-toggler {
@@ -119,7 +125,7 @@ select{
 .display,legend{
     font-size: 24px;
 }
-.order h1{
+.order h1,.orderConfirmation h2{
     text-align: center;
     font-family: 'Aladin', cursive;
 }
@@ -142,9 +148,15 @@ select{
 .checkoutMessage{
     display: none;
 }
+#checkoutMessage{
+    font-size: 24px;
+}
 #homeCheckout{
     margin-left: 30%;
     margin-top: 50px;
+}
+.tableContainer{
+       overflow-x: auto;
 }
 .address{
     display: none;

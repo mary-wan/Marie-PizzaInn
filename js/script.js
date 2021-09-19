@@ -77,7 +77,7 @@ $(document).ready(function () {
                 checkoutTotal += parseFloat(col[4].innerHTML);
             }
             $("#checkoutMessage").text("Your bill  is " + checkoutTotal + ". Your pizza  will be ready for pickup in 30 minutes. We look forward to serving you again. ");
-            $("#homeDelivery").css("margin-top", "40px");
+            $("#homeDelivery").css("margin-top", "10px");
             $("#homeDelivery").css("margin-left", "20%");
 
         });
