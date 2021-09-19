@@ -102,7 +102,7 @@ $(document).ready(function () {
             }else{
                 $(".address").hide(); 
                 $(".table").show();
-                $("#checkoutMessage").show().text("Dear " +name + ", Your bill plus the delivery price is " + homeCheckoutTotal + ".Your order will be delivered to " +location+ " in 1 hour. Kindly provide the payment on delivery");
+                $("#checkoutMessage").show().text("Dear " +name + ", Your bill plus the delivery price is " + homeCheckoutTotal + ". Your order will be delivered to " +location+ " in 1 hour. Kindly provide the payment on delivery");
             }
 
             
