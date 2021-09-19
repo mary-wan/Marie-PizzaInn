@@ -33,7 +33,7 @@
 ### Live link
  Click on the link to view the site.https://mary-wan.github.io/Marie-PizzaInn/
 ****
-[Go Back to the top](#maries's-PizzaInn)
+[Go Back to the top](#maries-pizzainn)
 ## Technology Used
 * HTML - for page structure.
 * CSS - which was used to style the pages.
@@ -41,7 +41,7 @@
 * jquery -used for DOM.
 
 ****
-[Go Back to the top](#maries's-PizzaInn)
+[Go Back to the top](#maries-pizzainn)
 ## Licence
 MIT License
 
@@ -67,9 +67,9 @@ SOFTWARE.
 
 
 ****
-[Go Back to the top](#maries's-PizzaInn)
+[Go Back to the top](#maries-pizzainn)
 ## Authors Info
 * Slack Profile - [Mary Njenga](https://app.slack.com/client/T077KKCG6/GLRQR61NW/user_profile/U027VKL1WLT?cdn_fallback=1)
 * Email - [Mary Njenga](mary.njenga@student.moringaschool.com)
 
-[Go Back to the top](#maries's-PizzaInn)
+[Go Back to the top](#maries-pizzainn)
