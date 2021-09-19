@@ -87,6 +87,9 @@ h1{
 #myCarousel{
     padding-left: 4%;
 }
+.item{
+    overflow: hidden;
+}
 .card {
     width: fit-content;
     margin: 10px;
