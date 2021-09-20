@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Marie's PizzaInn</title>
@@ -17,25 +16,27 @@
     <div class="container-fluid">
         <section id="home">
             <header>
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                    <img src="img/icon.png" alt="logo" class="navbar-brand" width="200" height="100">
-                    <!-- <p class="navbar-brand">Marie's PizzaInn</p> -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#home">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#order">ORDER</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">CONTACT</a>
-                            </li>
-                        </ul>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <img src="img/icon.png" alt="logo icon" class="navbar-brand" width="100" height="50">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#order">Order</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
                 <div class="intro">
@@ -47,57 +48,76 @@
 
             <!-- Menu Section -->
             <div class="menu p-4">
-                <h1>Our Menu</h1>
-                <!-- Perfect has 7 letters but so does Pizzzza. <br> -->
-                It's okay to eat a whole pizza by yourself <br><br>
-                <div class="container">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-
-                            <div class="item active">
-                                <div class="card col-lg-3 col-md-6 col-sm-12">
-                                    <img src="img/pizza1.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> Pepperoni pizza</p>
-                                </div>
-                                <div class="card col-lg-3 col-md-6 col-sm-12">
-                                    <img src="img/pizza2.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> Veggie pizza</p>
-                                </div>
-                                <div class="card col-lg-3 col-md-6 col-sm-12">
-                                    <img src="img/pizza3.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> BBQ Chicken pizza</p>
-                                </div>
-                                <div class="card">
-                                    <img src="img/pizza5.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> Cheese pizza</p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="card col-lg-3 col-md-6 col-sm-12">
-                                    <img src="img/pizza6.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> Meat pizza</p>
-                                </div>
-                                <div class="card col-lg-3 col-md-6 col-sm-12">
-                                    <img src="img/pizza7.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> Hawaiian pizza</p>
-                                </div>
-                                <div class="card col-lg-3 col-md-6 col-sm-12">
-                                    <img src="img/pizza1.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> Supreme pizza</p>
-                                </div>
-                                <div class="card">
-                                    <img src="img/pizza5.jpg" class="card-img-top" height="150">
-                                    <p class="desc p-4"> Meat Deluxe pizza</p>
-                                </div>
+                <div class="menuintro">
+                    <h1>Our Menu</h1>
+                    It's okay to eat a whole pizza by yourself <br><br>
+                </div>
+                <div id="imagecarousel" class="carousel slide p-2" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#imagecarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#imagecarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#imagecarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner row">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="img/pizz.jpeg" class="d-block w-100" alt="..." height="250">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Because who can live without pizza, right?</h5>
                             </div>
                         </div>
-                        <a href="#myCarousel" class="left carousel-control" data-slide="prev"><span
-                                class="icon-prev"></span>
-                        </a>
-                        <a href="#myCarousel" class="right carousel-control" data-slide="next"><span
-                                class="icon-next"></span>
-                        </a>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="img/pizza7.jpg" class="d-block w-100" alt="..." height="250">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Try our fresh pizza by the Slice</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="img/pizza4.jpg" class="d-block w-100" alt="..." height="250">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Must be the Pizza</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#imagecarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#imagecarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="prices row mt-4 mb-3">
+                    <h2>Special Pizza Prices</h2>
+                    <div class="listholder col-lg-4 col-sm-8">
+                        <h3>Available sizes</h3>
+                        <ul class="list">
+                            <li>Small ------------------ Ksh 500</li>
+                            <li>Medium -------------- Ksh 750</li>
+                            <li>Large ------------------ Ksh 1100</li>
+                        </ul>
+                    </div>
+                    <div class=" listholder col-lg-4 col-sm-8">
+                        <h3>Crusts</h3>
+                        <ul class="list">
+                            <li>Gluten free ------ Ksh 100</li>
+                            <li>Crispy -------------- Ksh 200</li>
+                            <li>Stuffed ------------ Ksh 300</li>
+                            <li>Cracker ------------ Ksh 150</li>
+                        </ul>
+                    </div>
+                    <div class="listholder col-lg-4 col-sm-8">
+                        <h3>Toppings</h3>
+                        <ul class="list">
+                            <li>Small pizza -------- Ksh 100</li>
+                            <li>Medium pizza ------ Ksh 150</li>
+                            <li>Large pizza --------- Ksh 200</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -195,7 +215,7 @@
                 </table>
             </div>
             <div class="checkdelivery">
-                <button class=" pizzaOrder btn m-3" id="add">ADD</button>
+                <button class=" pizzaOrder btn m-3" id="add">ADD PIZZA</button>
                 <button class="btn m-3" id="checkout">CHECKOUT</button>
                 <div class="checkoutMessage text-warning">
                     <p id="checkoutMessage"></p>
@@ -256,11 +276,13 @@
         </footer>
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+</script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
